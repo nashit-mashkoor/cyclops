@@ -1,0 +1,129 @@
+{
+    "supported_analytes": ["ch2o", "no2", "nh3", "c4h8o", "etoh", "no", "nicotine"],
+    "analyte_config": {
+      "ch2o": {
+        "analyte_multiplier": 0.4,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": 9.5,
+          "higher_clip_noise": [-0.5, 0.5]
+        },
+        "used_sensors": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+        ],
+        "internal_states": 256,
+        "thresholds": [0.1, 0.3],
+        "force_reset": false
+      },
+      "no2": {
+        "analyte_multiplier": 0.8,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": 10.0,
+          "higher_clip_noise": [-1.0, 1.0]
+        },
+        "used_sensors": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+        ],
+        "internal_states": 64,
+        "thresholds": [0.1, 0.3],
+        "force_reset": false
+      },
+      "nh3": {
+        "analyte_multiplier": 80.0,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": 75.0,
+          "higher_clip_noise": [-3.0, 3.0]
+        },
+        "used_sensors": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+        "internal_states": 20,
+        "thresholds": [15, 50],
+        "force_reset": false
+      },
+      "c4h8o": {
+        "analyte_multiplier": 35.0,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": 50.0,
+          "higher_clip_noise": [-3.0, 3.0]
+        },
+        "used_sensors": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+        ],
+        "internal_states": 200,
+        "thresholds": [15, 50],
+        "force_reset": false
+      },
+      "etoh": {
+        "analyte_multiplier": 1.0,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": null,
+          "higher_clip_noise": null
+        },
+        "used_sensors": [3, 5, 9, 11, 12, 13, 19, 20, 23, 24, 26, 29, 31],
+        "internal_states": 200,
+        "thresholds": [1.2, 1.8],
+        "force_reset": false
+      },
+      "no": {
+        "analyte_multiplier": 1.0,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": null,
+          "higher_clip_noise": null
+        },
+        "used_sensors": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+        ],
+        "internal_states": 200,
+        "thresholds": [0.8, 0.8],
+        "force_reset": false
+      },
+      "nicotine": {
+        "analyte_multiplier": 1.0,
+        "clipping_bounds": {
+          "lower_clip_bound": 0.0,
+          "higher_clip_bound": 1,
+          "higher_clip_noise": null
+        },
+        "used_sensors": [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+        ],
+        "internal_states": 20,
+        "thresholds": [0.5, 0.5],
+        "force_reset": false
+      }
+    },
+    "event_config":{
+      "supported_event_types": ["analyte_based", "tobacco"],
+      "supported_states": ["Green", "Yellow", "Red", "Black"],
+      "default_state": "Green",
+      "event_delay": 1,
+      "event_delay_unit": "count"
+    },
+    "data_config": {
+      "baseline_count": 30
+    },
+    "pred_config":{
+      "prediction_delay": 12
+    },
+    "db_config":{
+      "db_cleanup_delay": 300,
+      "db_size": 1048576
+    },
+    "ui_config":{
+      "ui_delay": 1.5
+    },
+    "app_config":{
+      "process_restart_count": 1,
+      "log_level": "INFO"
+    }
+  }

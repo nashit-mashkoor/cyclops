@@ -1,0 +1,14 @@
+.vscode
+venv
+__pycache__
+*.db
+whls/tensor*
+edgeDatabase/sample.py
+miModule/test.py
+.ipynb_checkpoints
+src/miModule/weights/*
+tflite
+src/log.txt
+src/test.py
+.env
+report.md
