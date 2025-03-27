@@ -1,4 +1,4 @@
-# Cyclops - Event Detection and IoT Gateway System
+# Cyclops
 
 Cyclops is an edge computing system tailored for scent monitoring and chemical analysis. Running on a Raspberry Pi 4B, it collects data from a proprietary sensor array (BFU), processes it using machine learning models, detects environmental events, and communicates with cloud services using IoT protocols. Unlike traditional cloud-based systems, Cyclops is designed to operate offline, offering robust computational capabilities at the edge.
 
